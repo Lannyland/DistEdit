@@ -9,3 +9,5 @@
 
 /DistEdit/Library/ScriptAssemblies
 /DistEdit/Library/metadata
+/DistEdit/obj
+/DistEdit/*.suo
