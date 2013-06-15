@@ -1,0 +1,17 @@
+/DistEdit/DistEdit_Data
+
+/DistEdit/DistEdit.exe
+
+/DistEdit/*.csproj
+/DistEdit/*.sln
+/DistEdit/*.DotSettings
+/DistEdit/*.csproj
+
+/DistEdit/Library/ScriptAssemblies
+/DistEdit/Library/metadata
+
+/DistEdit/Library/FailedAssetImports.txt
+/DistEdit/Library/guidmapper
+/DistEdit/Library/ScriptMapper
+/DistEdit/Library/assetDatabase3
+/DistEdit/Library/AssetServerCacheV3
