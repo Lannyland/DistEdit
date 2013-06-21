@@ -155,7 +155,7 @@ public class DrawFreeLine : MonoBehaviour {
 
             if (Assets.Scripts.Common.MISCLib.PointInPolygon(curVertex, polygonPoints))
             {
-                Debug.Log("Point " + curVertex.ToString() + "inside polygon.");
+                // Debug.Log("Point " + curVertex.ToString() + "inside polygon.");
                 HSLColor hslc = new HSLColor(240,1.0f,0.4f);
                 Color c = hslc.ToRGBA();
                 colors[i] = c;

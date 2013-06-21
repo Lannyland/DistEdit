@@ -9,7 +9,8 @@ namespace Assets.Scripts
     class ProjectConstants
     {
         #region Global constants
-        public static string strMapFileLoad = @"C:\Lanny\MAMI\IPPA\Maps\DistMaps\Smoothed_Small_HikerPaulDist.csv";
+        // public static string strMapFileLoad = @"C:\Lanny\MAMI\IPPA\Maps\DistMaps\Smoothed_Small_HikerPaulDist.csv";
+        public static string strMapFileLoad = @"C:\Lanny\MAMI\IPPA\Maps\DistMaps\TestDistMap100.csv";
         public static string strMapFileSave = @"C:\Lanny\MAMI\IPPA\Maps\DistMaps\NewDistMap.csv";
         // public static string strTerrainImage = @"http://lannyland.com/images/yulu.jpg";
         // public static string strTerrainImage = @"http://lannyland.com/images/LannylandIncHover.png";

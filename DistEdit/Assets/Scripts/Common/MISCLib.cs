@@ -68,7 +68,7 @@ namespace Assets.Scripts.Common
         }
 		
         // Scale image values between 0 and 255
-        public static void ScaleImageValues(ref RtwMatrix imgin)
+        public static void ScaleImageValues(ref RtwMatrix imgin, float scale)
         {
             float[] MinMax = imgin.MinMaxValue();
             float max = MinMax[1];
@@ -78,7 +78,7 @@ namespace Assets.Scripts.Common
                 {
                     for (int x = 0; x < imgin.Columns; x++)
                     {
-                        imgin[y, x] = imgin[y, x] / max * 255;
+                        imgin[y, x] = imgin[y, x] / max * scale;
                     }
                 }
             }
@@ -88,7 +88,7 @@ namespace Assets.Scripts.Common
                 {
                     for (int x = 0; x < imgin.Columns; x++)
                     {
-                        imgin[y, x] = imgin[y, x] / max * 255;
+                        imgin[y, x] = imgin[y, x] / max * scale;
                     }
                 }
             }
@@ -155,8 +155,21 @@ namespace Assets.Scripts.Common
 			}
 			return colors;
 		}
+
+        // Apply Difficulty Color Map
+        public static Color[] ApplyDistColorMap(Vector3[] vs)
+        {
+            Color[] colors = new Color[vs.Length];
+            int index = 0;
+            for (int i = 0; i < vs.Length; i++)
+            {
+                colors[index] = HeightToDistColor(vs[i].y, 4.0f);
+                index++;
+            }
+            return colors;
+        }
 		
-		// Flip map to draw correctly in Diff Editor
+        // Flip map to draw correctly in Diff Editor
 		public static RtwMatrix FlipTopBottom(RtwMatrix map)
 		{
 			RtwMatrix result = new RtwMatrix(map.Rows, map.Columns);

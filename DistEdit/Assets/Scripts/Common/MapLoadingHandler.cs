@@ -36,11 +36,12 @@ public class MapLoadingHandler : MonoBehaviour {
 	void LoadButtonHandler()
 	{
 		RtwMatrix mapIn = MISCLib.LoadMap(ProjectConstants.strMapFileLoad);
+        Assets.Scripts.Common.MISCLib.ScaleImageValues(ref mapIn, 4.0f);
 		Vector3[] vertices =  Assets.Scripts.Common.MISCLib.MatrixToArray(Assets.Scripts.Common.MISCLib.FlipTopBottom(mapIn));
 		// Camera.main.GetComponent<StartUpChores>().vertices = vertices;
         Mesh mesh = GameObject.Find("Plane").GetComponent<MeshFilter>().mesh;
         mesh.vertices = vertices;
-		mesh.colors = Assets.Scripts.Common.MISCLib.ApplyDiffColorMap(vertices);
+		mesh.colors = Assets.Scripts.Common.MISCLib.ApplyDistColorMap(vertices);
         mesh.RecalculateBounds();
         mesh.RecalculateNormals();		
 	}
