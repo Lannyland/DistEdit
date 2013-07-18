@@ -6,6 +6,8 @@
 /DistEdit/*.sln
 /DistEdit/*.DotSettings
 /DistEdit/*.csproj
+/DistEdit/*.pidb
+/DistEdit/*.unityproj
 
 /DistEdit/Library/ScriptAssemblies
 /DistEdit/Library/metadata
@@ -14,3 +16,7 @@
 /DistEdit/UnityVS.DistEdit.UnityScript.Plugins.unityproj
 
 DistEdit_Web
+
+/DistEdit/DistEdit.userprefs
+
+Temp
